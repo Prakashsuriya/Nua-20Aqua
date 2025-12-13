@@ -4,45 +4,53 @@ export default function Products() {
   const products = [
     {
       id: 1,
-      name: "NUA AQUA Pure",
-      description: "Crystal Clear Premium Water",
-      price: "$4.99",
-      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop",
+      name: "Mineral Water",
+      price: "$2.99",
+      size: "750 ML",
+      description: "Enriched with Essential Minerals",
+      details:
+        "Our mineral water is enriched with essential minerals that support optimal health and wellness. Perfect for daily hydration.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=400",
     },
     {
       id: 2,
-      name: "NUA AQUA Mineral",
-      description: "Enriched with Essential Minerals",
-      price: "$5.99",
-      image: "https://images.unsplash.com/photo-1559839734033-6461d227b9ee?w=400&h=400&fit=crop",
+      name: "Vitamin B12",
+      price: "$3.49",
+      size: "750 ML",
+      description: "Energy & Wellness Water",
+      details:
+        "Infused with Vitamin B12 to support energy and metabolism. An elevated hydration experience for those seeking enhanced wellness.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=400",
     },
     {
       id: 3,
-      name: "NUA AQUA Alkaline",
-      description: "pH Balanced Wellness Water",
-      price: "$6.99",
-      image: "https://images.unsplash.com/photo-1600788148184-289e360cc8d6?w=400&h=400&fit=crop",
+      name: "Sparkling Water",
+      price: "$2.49",
+      size: "330 ML",
+      description: "Refined Mineral Richness",
+      details:
+        "Nevas Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
     },
     {
       id: 4,
-      name: "NUA AQUA Spark",
-      description: "Refreshing Sparkling Water",
-      price: "$5.49",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad576?w=400&h=400&fit=crop",
+      name: "Himalayan Water",
+      price: "$3.99",
+      size: "330 ML",
+      description: "Pure Himalayan Spring Water",
+      details:
+        "Premium canned Himalayan water sourced directly from pristine springs. Flows through natural rock layers for pure, refreshing taste.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=400",
     },
     {
       id: 5,
-      name: "NUA AQUA Premium",
-      description: "Luxury Water Experience",
-      price: "$7.99",
-      image: "https://images.unsplash.com/photo-1609590466014-e2edaa309baa?w=400&h=400&fit=crop",
-    },
-    {
-      id: 6,
-      name: "NUA AQUA Detox",
-      description: "Cleansing Mineral Water",
-      price: "$6.49",
-      image: "https://images.unsplash.com/photo-1534038802500-c8e0ebc0a699?w=400&h=400&fit=crop",
+      name: "Still Water",
+      price: "$4.99",
+      size: "750 ML",
+      description: "Premium Glass Bottle",
+      details:
+        "The true luxury of pure water in elegant glass packaging. A sophisticated choice for those who appreciate refined hydration.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=400",
     },
   ];
 
@@ -72,31 +80,42 @@ export default function Products() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="group rounded-lg border border-gold-500/20 hover:border-gold-500/50 bg-gradient-to-br from-navy-700 to-navy-800 overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-gold-500/20"
+                className="group rounded-lg border border-teal-500/20 hover:border-teal-500/50 bg-gradient-to-br from-navy-700 to-navy-800 overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-500/20"
               >
                 {/* Product Image */}
                 <div className="relative h-64 overflow-hidden bg-navy-900">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover opacity-75 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-800 to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-800 to-transparent opacity-40"></div>
                 </div>
 
                 {/* Product Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gold-400 mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-white/70 mb-4 text-sm">
+                  <div className="mb-3">
+                    <h3 className="text-xl font-bold text-teal-400 mb-1">
+                      {product.name}
+                    </h3>
+                    <span className="text-xs text-teal-500/70 font-semibold">
+                      {product.size}
+                    </span>
+                  </div>
+
+                  <p className="text-white/70 mb-3 text-sm">
                     {product.description}
                   </p>
+
+                  <p className="text-white/60 text-xs mb-4 leading-relaxed">
+                    {product.details}
+                  </p>
+
                   <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-gold-400">
+                    <span className="text-2xl font-bold text-teal-400">
                       {product.price}
                     </span>
-                    <button className="px-4 py-2 bg-gold-500/20 text-gold-400 border border-gold-500/50 rounded-lg hover:bg-gold-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold">
+                    <button className="px-4 py-2 bg-teal-500/20 text-teal-400 border border-teal-500/50 rounded-lg hover:bg-teal-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold">
                       Add to Cart
                     </button>
                   </div>
@@ -108,11 +127,11 @@ export default function Products() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy-950 border-t border-gold-500/20 py-12">
+      <footer className="bg-navy-950 border-t border-teal-500/20 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-gold-500/20 pt-8">
+          <div className="border-t border-teal-500/20 pt-8">
             <p className="text-white/60 text-center font-light">
-              © 2024 NUA AQUA. All rights reserved.
+              © 2024 NEVAS Premium Water. All rights reserved.
             </p>
           </div>
         </div>
