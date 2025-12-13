@@ -106,18 +106,11 @@ export function ProductMarquee() {
                 </div>
 
                 {/* Product Info */}
-                <div className="p-5">
+                <div className="p-5 pb-6">
                   <h4 className="text-lg font-bold text-teal-400 mb-1">
                     {product.name}
                   </h4>
                   <p className="text-sm text-white/70">{product.description}</p>
-                </div>
-
-                {/* Hover CTA */}
-                <div className="px-5 pb-5">
-                  <button className="w-full py-2 bg-teal-500/20 text-teal-400 border border-teal-500/50 rounded-lg hover:bg-teal-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold">
-                    View Details
-                  </button>
                 </div>
               </div>
             </div>

@@ -1,58 +1,61 @@
 import { Header } from "@/components/Header";
+import { useState } from "react";
+import { X } from "lucide-react";
 
 export default function Products() {
+  const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
+
   const products = [
     {
       id: 1,
       name: "Mineral Water",
-      price: "$2.99",
       size: "750 ML",
       description: "Enriched with Essential Minerals",
       details:
-        "Our mineral water is enriched with essential minerals that support optimal health and wellness. Perfect for daily hydration.",
+        "Our mineral water is enriched with essential minerals that support optimal health and wellness. Perfect for daily hydration. Each bottle contains naturally sourced minerals including calcium, magnesium, and potassium that support bone health and overall vitality.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=400",
     },
     {
       id: 2,
       name: "Vitamin B12",
-      price: "$3.49",
       size: "750 ML",
       description: "Energy & Wellness Water",
       details:
-        "Infused with Vitamin B12 to support energy and metabolism. An elevated hydration experience for those seeking enhanced wellness.",
+        "Infused with Vitamin B12 to support energy and metabolism. An elevated hydration experience for those seeking enhanced wellness. Our B12-enriched formula helps combat fatigue and supports red blood cell formation, making it ideal for active individuals.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=400",
     },
     {
       id: 3,
       name: "Sparkling Water",
-      price: "$2.49",
       size: "330 ML",
       description: "Refined Mineral Richness",
       details:
-        "Nevas Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives.",
+        "Nevas Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives. Enjoy the perfect refreshment with natural carbonation and essential minerals, delivering an elevated taste experience with every sip.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
     },
     {
       id: 4,
       name: "Himalayan Water",
-      price: "$3.99",
       size: "330 ML",
       description: "Pure Himalayan Spring Water",
       details:
-        "Premium canned Himalayan water sourced directly from pristine springs. Flows through natural rock layers for pure, refreshing taste.",
+        "Premium canned Himalayan water sourced directly from pristine springs. Flows through natural rock layers for pure, refreshing taste. Our proprietary sourcing ensures the highest purity standards, free from contaminants and enriched with nature's finest minerals.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=400",
     },
     {
       id: 5,
       name: "Still Water",
-      price: "$4.99",
       size: "750 ML",
       description: "Premium Glass Bottle",
       details:
-        "The true luxury of pure water in elegant glass packaging. A sophisticated choice for those who appreciate refined hydration.",
+        "The true luxury of pure water in elegant glass packaging. A sophisticated choice for those who appreciate refined hydration. Our still water is sourced from premium springs and delivered in environmentally-friendly glass bottles that preserve purity.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=400",
     },
   ];
+
+  const selectedProductData = selectedProduct
+    ? products.find((p) => p.id === selectedProduct)
+    : null;
 
   return (
     <div className="bg-navy-800 min-h-screen">
@@ -103,20 +106,16 @@ export default function Products() {
                     </span>
                   </div>
 
-                  <p className="text-white/70 mb-3 text-sm">
+                  <p className="text-white/70 mb-6 text-sm">
                     {product.description}
                   </p>
 
-                  <p className="text-white/60 text-xs mb-4 leading-relaxed">
-                    {product.details}
-                  </p>
-
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-teal-400">
-                      {product.price}
-                    </span>
-                    <button className="px-4 py-2 bg-teal-500/20 text-teal-400 border border-teal-500/50 rounded-lg hover:bg-teal-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold">
-                      Add to Cart
+                  <div className="flex justify-center">
+                    <button
+                      onClick={() => setSelectedProduct(product.id)}
+                      className="px-6 py-2 bg-teal-500/20 text-teal-400 border border-teal-500/50 rounded-lg hover:bg-teal-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold"
+                    >
+                      View Details
                     </button>
                   </div>
                 </div>
@@ -125,6 +124,81 @@ export default function Products() {
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedProductData && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-navy-800 border-2 border-teal-500/30 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            {/* Modal Header */}
+            <div className="sticky top-0 flex justify-between items-center p-6 border-b border-teal-500/20 bg-navy-800">
+              <h2 className="text-3xl font-bold text-white">
+                {selectedProductData.name}
+              </h2>
+              <button
+                onClick={() => setSelectedProduct(null)}
+                className="p-2 hover:bg-navy-700 rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6">
+              {/* Image */}
+              <div className="mb-6">
+                <img
+                  src={selectedProductData.image}
+                  alt={selectedProductData.name}
+                  className="w-full h-96 object-cover rounded-lg border border-teal-500/20"
+                />
+              </div>
+
+              {/* Product Info */}
+              <div className="space-y-4 mb-6">
+                <div>
+                  <p className="text-teal-400 text-sm font-semibold mb-1">
+                    SIZE
+                  </p>
+                  <p className="text-white text-lg font-semibold">
+                    {selectedProductData.size}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-teal-400 text-sm font-semibold mb-1">
+                    DESCRIPTION
+                  </p>
+                  <p className="text-white/80 text-lg">
+                    {selectedProductData.description}
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-teal-400 text-sm font-semibold mb-2">
+                    ABOUT THIS PRODUCT
+                  </p>
+                  <p className="text-white/70 leading-relaxed">
+                    {selectedProductData.details}
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex gap-4">
+                <button className="flex-1 px-6 py-3 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30">
+                  Add to Cart
+                </button>
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="flex-1 px-6 py-3 border-2 border-teal-500 text-teal-400 font-bold rounded-lg hover:bg-teal-500/10 transition-all duration-300"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="bg-navy-950 border-t border-teal-500/20 py-12">

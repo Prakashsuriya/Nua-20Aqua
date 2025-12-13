@@ -8,7 +8,7 @@ export default function Team() {
       role: "Founder & Chief Executive Officer",
       description:
         "A visionary entrepreneur with a passion for wellness and innovation. Keshav Budhia founded Nevas Water with a singular goal to transform how people experience hydration. His leadership drives the brand's premium positioning and bold expansion into luxury and wellness markets.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ export default function Team() {
       role: "Chief Marketing Officer",
       description:
         "The creative engine behind Nevas' branding and market strategy. With a deep understanding of consumer psychology and modern aesthetics, Avinash crafts compelling narratives and campaigns that position Nevas as the water of choice for discerning and health-focused consumers.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ export default function Team() {
       role: "Director",
       description:
         "Bringing strategic rigor and operational excellence to Nevas. Ritesh ensures that every drop of Nevas Water reaches its destination with unmatched quality and efficiency. His focus on scalability, distribution, and strategic partnerships shapes the future of premium hydration in Surat.",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop",
     },
   ];
 
@@ -60,14 +60,14 @@ export default function Team() {
               >
                 {/* Image */}
                 <div
-                  className={`relative h-96 rounded-lg overflow-hidden border-2 border-teal-500/30 bg-gradient-to-br from-navy-700 to-navy-800 group ${
+                  className={`relative rounded-lg overflow-hidden border-2 border-teal-500/30 bg-gradient-to-br from-navy-700 to-navy-800 group aspect-square ${
                     index % 2 === 1 ? "md:order-last" : ""
                   }`}
                 >
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent opacity-60"></div>
                 </div>
