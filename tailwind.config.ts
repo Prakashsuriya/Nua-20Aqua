@@ -39,15 +39,17 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        gold: {
-          50: "#faf8f3",
-          100: "#f5f1e8",
-          200: "#ebe4d1",
-          300: "#d4c5a9",
-          400: "#c4ad83",
-          500: "#b8985b",
-          600: "#a68449",
-          DEFAULT: "#c9a961",
+        teal: {
+          50: "#f0f9f9",
+          100: "#e0f2f1",
+          200: "#b2dfdb",
+          300: "#80cbc4",
+          400: "#4db8aa",
+          500: "#26a69a",
+          600: "#1a8c84",
+          700: "#00796b",
+          800: "#004d48",
+          DEFAULT: "#00897b",
         },
         navy: {
           50: "#f0f4f8",
@@ -59,6 +61,7 @@ export default {
           600: "#2c3e6f",
           700: "#1a2d5a",
           800: "#0f1f3f",
+          900: "#081229",
           DEFAULT: "#1a2d5a",
         },
         popover: {
@@ -101,8 +104,8 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(201, 169, 97, 0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(201, 169, 97, 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(0, 137, 123, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(0, 137, 123, 0.6)" },
         },
       },
       animation: {

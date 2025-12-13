@@ -7,29 +7,29 @@
 
 @layer base {
   /**
-   * Nua Aqua Luxury Brand Theme
-   * Dark Navy Blue with Gold Accents
+   * NEVAS Premium Water Brand Theme
+   * Dark Navy with Teal/Turquoise Accents
    */
   :root {
     --background: 210 25% 8%;
-    --foreground: 60 100% 90%;
+    --foreground: 180 100% 95%;
 
     --card: 210 25% 12%;
-    --card-foreground: 60 100% 90%;
+    --card-foreground: 180 100% 95%;
 
     --popover: 210 25% 12%;
-    --popover-foreground: 60 100% 90%;
+    --popover-foreground: 180 100% 95%;
 
     --primary: 210 25% 8%;
-    --primary-foreground: 60 100% 80%;
+    --primary-foreground: 180 100% 80%;
 
-    --secondary: 60 70% 70%;
+    --secondary: 175 75% 50%;
     --secondary-foreground: 210 25% 8%;
 
     --muted: 210 20% 25%;
-    --muted-foreground: 60 30% 70%;
+    --muted-foreground: 180 50% 70%;
 
-    --accent: 60 70% 70%;
+    --accent: 175 75% 50%;
     --accent-foreground: 210 25% 8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,39 +37,39 @@
 
     --border: 210 20% 20%;
     --input: 210 20% 25%;
-    --ring: 60 100% 80%;
+    --ring: 175 100% 50%;
 
     --radius: 0.5rem;
   }
 
   .dark {
     --background: 210 25% 8%;
-    --foreground: 60 100% 90%;
+    --foreground: 180 100% 95%;
 
     --card: 210 25% 12%;
-    --card-foreground: 60 100% 90%;
+    --card-foreground: 180 100% 95%;
 
     --popover: 210 25% 12%;
-    --popover-foreground: 60 100% 90%;
+    --popover-foreground: 180 100% 95%;
 
     --primary: 210 25% 8%;
-    --primary-foreground: 60 100% 80%;
+    --primary-foreground: 180 100% 80%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 175 75% 50%;
+    --secondary-foreground: 210 25% 8%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 175 75% 50%;
+    --accent-foreground: 210 25% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 175 100% 50%;
   }
 }
 
@@ -112,20 +112,20 @@
 
 /* Custom utilities */
 @layer utilities {
-  .text-gold {
-    @apply text-gold-400;
+  .text-teal {
+    @apply text-teal-500;
   }
 
-  .text-gold-accent {
-    @apply text-gold-500;
+  .text-teal-accent {
+    @apply text-teal-400;
   }
 
   .bg-gradient-navy {
     @apply bg-gradient-to-br from-navy-800 to-navy-900;
   }
 
-  .border-gold {
-    @apply border-gold-500;
+  .border-teal {
+    @apply border-teal-500;
   }
 
   .scrollbar-hide::-webkit-scrollbar {
