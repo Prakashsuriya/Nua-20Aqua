@@ -9,20 +9,15 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative w-full min-h-screen pt-20 flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3571003/3571003-hd_1920_1080_24fps.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        {/* Video Background - YouTube Embed */}
+        <iframe
+          className="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/ycV_w0O36PQ?autoplay=1&mute=1&loop=1&controls=0&playlist=ycV_w0O36PQ&modestbranding=1"
+          title="Water Background Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ pointerEvents: 'none', border: 'none' }}
+        ></iframe>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
