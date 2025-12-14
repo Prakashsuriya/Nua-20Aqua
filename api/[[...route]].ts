@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import express from "express";
 import serverless from "serverless-http";
 import cors from "cors";
+import { readFileSync } from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distPath = path.join(__dirname, "../dist/spa");
@@ -22,6 +23,10 @@ app.get("/api/ping", (_req, res) => {
   res.json({ message: ping });
 });
 
+app.get("/api/demo", (_req, res) => {
+  res.status(200).json({ message: "Hello from Express server" });
+});
+
 // Serve static files from SPA
 app.use(express.static(distPath));
 
@@ -32,7 +37,13 @@ app.get("*", (req, res) => {
     return res.status(404).json({ error: "API endpoint not found" });
   }
 
-  res.sendFile(path.join(distPath, "index.html"));
+  try {
+    const html = readFileSync(path.join(distPath, "index.html"), "utf-8");
+    res.setHeader("Content-Type", "text/html");
+    res.send(html);
+  } catch (err) {
+    res.status(404).json({ error: "Not found" });
+  }
 });
 
 export default serverless(app);
