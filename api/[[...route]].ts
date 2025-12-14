@@ -1,41 +1,38 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import path from "path";
 import { fileURLToPath } from "url";
-import { readFileSync } from "fs";
+import express from "express";
+import serverless from "serverless-http";
+import cors from "cors";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const distPath = path.join(__dirname, "../dist/spa");
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  try {
-    // Dynamically import the built server
-    const serverModule = await import("../dist/server/node-build.mjs");
-    const { createServer } = serverModule;
+// Create Express app
+const app = express();
 
-    // Create Express app
-    const app = createServer();
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-    // Serve static files from SPA
-    const express = await import("express");
-    const distPath = path.join(__dirname, "../dist/spa");
+// API routes
+app.get("/api/ping", (_req, res) => {
+  const ping = process.env.PING_MESSAGE ?? "ping";
+  res.json({ message: ping });
+});
 
-    app.use(express.static(distPath));
+// Serve static files from SPA
+app.use(express.static(distPath));
 
-    // Handle React Router - serve index.html for non-API routes
-    app.get("*", (_, res) => {
-      try {
-        const indexPath = path.join(distPath, "index.html");
-        const html = readFileSync(indexPath, "utf-8");
-        res.setHeader("Content-Type", "text/html");
-        res.send(html);
-      } catch (err) {
-        res.status(404).json({ error: "Not found" });
-      }
-    });
-
-    // Handle the request
-    return app(req, res);
-  } catch (error) {
-    console.error("Server error:", error);
-    res.status(500).json({ error: "Internal server error" });
+// Handle React Router - serve index.html for non-API routes
+app.get("*", (req, res) => {
+  // Don't serve index.html for API routes
+  if (req.path.startsWith("/api/") || req.path.startsWith("/health")) {
+    return res.status(404).json({ error: "API endpoint not found" });
   }
-}
+
+  res.sendFile(path.join(distPath, "index.html"));
+});
+
+export default serverless(app);
