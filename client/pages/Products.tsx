@@ -125,75 +125,64 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Modal */}
+      {/* Full Screen Modal */}
       {selectedProductData && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-navy-800 border-2 border-teal-500/30 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            {/* Modal Header */}
-            <div className="sticky top-0 flex justify-between items-center p-6 border-b border-teal-500/20 bg-navy-800">
-              <h2 className="text-3xl font-bold text-white">
-                {selectedProductData.name}
-              </h2>
-              <button
-                onClick={() => setSelectedProduct(null)}
-                className="p-2 hover:bg-navy-700 rounded-lg transition-colors"
-              >
-                <X className="w-6 h-6 text-white" />
-              </button>
-            </div>
+        <div className="fixed inset-0 bg-navy-900 z-50 overflow-y-auto flex flex-col">
+          {/* Modal Header with Close */}
+          <div className="sticky top-0 flex justify-between items-center p-6 border-b border-teal-500/20 bg-navy-800 z-10">
+            <h2 className="text-3xl font-bold text-white">
+              {selectedProductData.name}
+            </h2>
+            <button
+              onClick={() => setSelectedProduct(null)}
+              className="p-2 hover:bg-navy-700 rounded-lg transition-colors"
+            >
+              <X className="w-6 h-6 text-white" />
+            </button>
+          </div>
 
-            {/* Modal Content */}
-            <div className="p-6">
-              {/* Image */}
-              <div className="mb-6">
-                <img
-                  src={selectedProductData.image}
-                  alt={selectedProductData.name}
-                  className="w-full h-96 object-cover rounded-lg border border-teal-500/20"
-                />
-              </div>
-
-              {/* Product Info */}
-              <div className="space-y-4 mb-6">
+          {/* Modal Content */}
+          <div className="flex-1 p-8 md:p-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Image */}
                 <div>
-                  <p className="text-teal-400 text-sm font-semibold mb-1">
-                    SIZE
-                  </p>
-                  <p className="text-white text-lg font-semibold">
-                    {selectedProductData.size}
-                  </p>
+                  <img
+                    src={selectedProductData.image}
+                    alt={selectedProductData.name}
+                    className="w-full h-auto object-cover rounded-lg border border-teal-500/20"
+                  />
                 </div>
 
-                <div>
-                  <p className="text-teal-400 text-sm font-semibold mb-1">
-                    DESCRIPTION
-                  </p>
-                  <p className="text-white/80 text-lg">
-                    {selectedProductData.description}
-                  </p>
-                </div>
+                {/* Product Info */}
+                <div className="space-y-8">
+                  <div>
+                    <p className="text-teal-400 text-sm font-semibold mb-2 uppercase tracking-widest">
+                      SIZE
+                    </p>
+                    <p className="text-white text-2xl font-bold">
+                      {selectedProductData.size}
+                    </p>
+                  </div>
 
-                <div>
-                  <p className="text-teal-400 text-sm font-semibold mb-2">
-                    ABOUT THIS PRODUCT
-                  </p>
-                  <p className="text-white/70 leading-relaxed">
-                    {selectedProductData.details}
-                  </p>
-                </div>
-              </div>
+                  <div>
+                    <p className="text-teal-400 text-sm font-semibold mb-2 uppercase tracking-widest">
+                      DESCRIPTION
+                    </p>
+                    <p className="text-white/80 text-xl leading-relaxed">
+                      {selectedProductData.description}
+                    </p>
+                  </div>
 
-              {/* CTA Buttons */}
-              <div className="flex gap-4">
-                <button className="flex-1 px-6 py-3 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30">
-                  Add to Cart
-                </button>
-                <button
-                  onClick={() => setSelectedProduct(null)}
-                  className="flex-1 px-6 py-3 border-2 border-teal-500 text-teal-400 font-bold rounded-lg hover:bg-teal-500/10 transition-all duration-300"
-                >
-                  Close
-                </button>
+                  <div>
+                    <p className="text-teal-400 text-sm font-semibold mb-4 uppercase tracking-widest">
+                      ABOUT THIS PRODUCT
+                    </p>
+                    <p className="text-white/70 text-lg leading-relaxed">
+                      {selectedProductData.details}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -205,7 +194,7 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t border-teal-500/20 pt-8">
             <p className="text-white/60 text-center font-light">
-              © 2024 NEVAS Premium Water. All rights reserved.
+              © 2025 Nua Premium Water. All rights reserved.
             </p>
           </div>
         </div>
