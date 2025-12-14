@@ -125,7 +125,7 @@ export default function Index() {
                 The True Luxury of Pure Water
               </h3>
               <p className="text-white/80 text-lg mb-6 leading-relaxed font-light">
-                NEVAS represents the pinnacle of premium water. Sourced from the
+                Nua represents the pinnacle of premium water. Sourced from the
                 world's most pristine springs and Himalayan regions, our water is
                 carefully filtered and enriched with essential minerals to provide
                 the ultimate hydration experience.
@@ -133,7 +133,7 @@ export default function Index() {
               <p className="text-white/80 text-lg mb-8 leading-relaxed font-light">
                 We are committed to raising the standard of hydration through
                 elegance, wellness, and environmental responsibility. Every bottle
-                of NEVAS is a testament to our dedication to quality and innovation.
+                of Nua is a testament to our dedication to quality and innovation.
               </p>
               <button className="px-8 py-3 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30">
                 Discover More
@@ -160,13 +160,10 @@ export default function Index() {
             Experience the Difference
           </h2>
           <p className="text-xl text-white/80 mb-8 font-light">
-            Join thousands of customers who have made NEVAS their premium
+            Join thousands of customers who have made Nua their premium
             hydration choice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/30">
-              Shop Now
-            </button>
             <button className="px-8 py-4 border-2 border-teal-500 text-teal-400 font-bold rounded-lg hover:bg-teal-500/10 transition-all duration-300">
               Contact Us
             </button>
@@ -263,7 +260,7 @@ export default function Index() {
           <div className="border-t border-teal-500/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-white/60 font-light">
-                © 2024 NEVAS Premium Water. All rights reserved.
+                © 2025 Nua Premium Water. All rights reserved.
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
                 <a href="#" className="text-white/60 hover:text-teal-400 transition-colors text-sm">
