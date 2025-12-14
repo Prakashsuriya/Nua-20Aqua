@@ -14,8 +14,9 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto font-light">
-              Whether you're a hospitality partner, distributor, health conscious
-              consumer, or event planner, we'd love to connect with you.
+              Whether you're a hospitality partner, distributor, health
+              conscious consumer, or event planner, we'd love to connect with
+              you.
             </p>
           </div>
         </div>

@@ -45,7 +45,8 @@ export default function Distribution() {
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto font-light">
               Nua Premium Water is available through our trusted distribution
-              partners across India, ensuring premium quality reaches your doorstep.
+              partners across India, ensuring premium quality reaches your
+              doorstep.
             </p>
           </div>
         </div>
@@ -55,7 +56,9 @@ export default function Distribution() {
       <section className="py-20 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Distribution Partners</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Distribution Partners
+            </h2>
             <p className="text-white/70 text-lg font-light">
               Connecting premium water to premium destinations
             </p>
@@ -79,8 +82,12 @@ export default function Distribution() {
                   <div className="flex gap-3">
                     <MapPin className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs text-teal-400 font-semibold mb-1">COVERAGE</p>
-                      <p className="text-white/80 text-sm">{distributor.coverage}</p>
+                      <p className="text-xs text-teal-400 font-semibold mb-1">
+                        COVERAGE
+                      </p>
+                      <p className="text-white/80 text-sm">
+                        {distributor.coverage}
+                      </p>
                     </div>
                   </div>
 
@@ -88,8 +95,12 @@ export default function Distribution() {
                   <div className="flex gap-3">
                     <MapPin className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs text-teal-400 font-semibold mb-1">ADDRESS</p>
-                      <p className="text-white/80 text-sm">{distributor.address}</p>
+                      <p className="text-xs text-teal-400 font-semibold mb-1">
+                        ADDRESS
+                      </p>
+                      <p className="text-white/80 text-sm">
+                        {distributor.address}
+                      </p>
                     </div>
                   </div>
 
@@ -97,7 +108,9 @@ export default function Distribution() {
                   <div className="flex gap-3">
                     <Phone className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs text-teal-400 font-semibold mb-1">PHONE</p>
+                      <p className="text-xs text-teal-400 font-semibold mb-1">
+                        PHONE
+                      </p>
                       <a
                         href={`tel:${distributor.contact}`}
                         className="text-teal-400 text-sm hover:text-teal-300 transition-colors"
@@ -111,7 +124,9 @@ export default function Distribution() {
                   <div className="flex gap-3">
                     <Mail className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs text-teal-400 font-semibold mb-1">EMAIL</p>
+                      <p className="text-xs text-teal-400 font-semibold mb-1">
+                        EMAIL
+                      </p>
                       <a
                         href={`mailto:${distributor.email}`}
                         className="text-teal-400 text-sm hover:text-teal-300 transition-colors break-all"
@@ -135,34 +150,41 @@ export default function Distribution() {
               Become Our Distribution Partner
             </h2>
             <p className="text-white/80 text-lg max-w-3xl mx-auto font-light">
-              Join our growing network of distributors and be part of the premium
-              water revolution. We offer comprehensive support and attractive margins
-              for our partners.
+              Join our growing network of distributors and be part of the
+              premium water revolution. We offer comprehensive support and
+              attractive margins for our partners.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Competitive Pricing</h3>
+              <h3 className="text-2xl font-bold text-teal-400 mb-4">
+                Competitive Pricing
+              </h3>
               <p className="text-white/70 leading-relaxed">
-                Attractive wholesale rates and margin structure designed to maximize
-                your profitability in the premium water segment.
+                Attractive wholesale rates and margin structure designed to
+                maximize your profitability in the premium water segment.
               </p>
             </div>
 
             <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Marketing Support</h3>
+              <h3 className="text-2xl font-bold text-teal-400 mb-4">
+                Marketing Support
+              </h3>
               <p className="text-white/70 leading-relaxed">
-                Comprehensive marketing materials, training, and ongoing promotional
-                support to ensure your success in selling Nua Premium Water.
+                Comprehensive marketing materials, training, and ongoing
+                promotional support to ensure your success in selling Nua
+                Premium Water.
               </p>
             </div>
 
             <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Logistics Support</h3>
+              <h3 className="text-2xl font-bold text-teal-400 mb-4">
+                Logistics Support
+              </h3>
               <p className="text-white/70 leading-relaxed">
-                Reliable supply chain management with timely deliveries and dedicated
-                logistics support to maintain stock availability.
+                Reliable supply chain management with timely deliveries and
+                dedicated logistics support to maintain stock availability.
               </p>
             </div>
           </div>

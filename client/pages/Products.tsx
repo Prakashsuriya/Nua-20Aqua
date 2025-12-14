@@ -13,7 +13,8 @@ export default function Products() {
       description: "Enriched with Essential Minerals",
       details:
         "Our mineral water is enriched with essential minerals that support optimal health and wellness. Perfect for daily hydration. Each bottle contains naturally sourced minerals including calcium, magnesium, and potassium that support bone health and overall vitality.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=400",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=400",
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ export default function Products() {
       description: "Energy & Wellness Water",
       details:
         "Infused with Vitamin B12 to support energy and metabolism. An elevated hydration experience for those seeking enhanced wellness. Our B12-enriched formula helps combat fatigue and supports red blood cell formation, making it ideal for active individuals.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=400",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=400",
     },
     {
       id: 3,
@@ -31,7 +33,8 @@ export default function Products() {
       description: "Refined Mineral Richness",
       details:
         "Nua Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives. Enjoy the perfect refreshment with natural carbonation and essential minerals, delivering an elevated taste experience with every sip.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
     },
     {
       id: 4,
@@ -40,7 +43,8 @@ export default function Products() {
       description: "Pure Himalayan Spring Water",
       details:
         "Premium canned Himalayan water sourced directly from pristine springs. Flows through natural rock layers for pure, refreshing taste. Our proprietary sourcing ensures the highest purity standards, free from contaminants and enriched with nature's finest minerals.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=400",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=400",
     },
     {
       id: 5,
@@ -49,7 +53,8 @@ export default function Products() {
       description: "Premium Glass Bottle",
       details:
         "The true luxury of pure water in elegant glass packaging. A sophisticated choice for those who appreciate refined hydration. Our still water is sourced from premium springs and delivered in environmentally-friendly glass bottles that preserve purity.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=400",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=400",
     },
   ];
 

@@ -16,7 +16,7 @@ export default function Index() {
           title="Water Background Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          style={{ pointerEvents: 'none', border: 'none' }}
+          style={{ pointerEvents: "none", border: "none" }}
         ></iframe>
 
         {/* Dark Overlay */}
@@ -104,10 +104,13 @@ export default function Index() {
               <div className="w-14 h-14 rounded-full bg-teal-500/20 flex items-center justify-center mb-6 group-hover:bg-teal-500/40 transition-colors">
                 <Award className="w-7 h-7 text-teal-400" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-3">Health Benefits</h4>
+              <h4 className="text-xl font-bold text-white mb-3">
+                Health Benefits
+              </h4>
               <p className="text-white/70 leading-relaxed">
-                Enriched with essential minerals and nutrients. Our vitamin-infused
-                and mineral-rich water varieties support your wellness journey.
+                Enriched with essential minerals and nutrients. Our
+                vitamin-infused and mineral-rich water varieties support your
+                wellness journey.
               </p>
             </div>
 
@@ -116,10 +119,12 @@ export default function Index() {
               <div className="w-14 h-14 rounded-full bg-teal-500/20 flex items-center justify-center mb-6 group-hover:bg-teal-500/40 transition-colors">
                 <Leaf className="w-7 h-7 text-teal-400" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-3">Eco-Friendly</h4>
+              <h4 className="text-xl font-bold text-white mb-3">
+                Eco-Friendly
+              </h4>
               <p className="text-white/70 leading-relaxed">
-                Committed to sustainability with responsible packaging and ethical
-                sourcing practices for a better future.
+                Committed to sustainability with responsible packaging and
+                ethical sourcing practices for a better future.
               </p>
             </div>
           </div>
@@ -127,7 +132,10 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gradient-to-b from-navy-800 to-navy-900">
+      <section
+        id="about"
+        className="py-20 bg-gradient-to-b from-navy-800 to-navy-900"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -139,14 +147,15 @@ export default function Index() {
               </h3>
               <p className="text-white/80 text-lg mb-6 leading-relaxed font-light">
                 Nua represents the pinnacle of premium water. Sourced from the
-                world's most pristine springs and Himalayan regions, our water is
-                carefully filtered and enriched with essential minerals to provide
-                the ultimate hydration experience.
+                world's most pristine springs and Himalayan regions, our water
+                is carefully filtered and enriched with essential minerals to
+                provide the ultimate hydration experience.
               </p>
               <p className="text-white/80 text-lg mb-8 leading-relaxed font-light">
                 We are committed to raising the standard of hydration through
-                elegance, wellness, and environmental responsibility. Every bottle
-                of Nua is a testament to our dedication to quality and innovation.
+                elegance, wellness, and environmental responsibility. Every
+                bottle of Nua is a testament to our dedication to quality and
+                innovation.
               </p>
               <button className="px-8 py-3 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30">
                 Discover More
@@ -192,17 +201,26 @@ export default function Index() {
               <h4 className="text-teal-400 font-bold mb-4">About</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Our Story
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Sustainability
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Team
                   </a>
                 </li>
@@ -212,17 +230,26 @@ export default function Index() {
               <h4 className="text-teal-400 font-bold mb-4">Products</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Premium Collection
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Wellness Range
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Bulk Orders
                   </a>
                 </li>
@@ -232,17 +259,26 @@ export default function Index() {
               <h4 className="text-teal-400 font-bold mb-4">Support</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Shipping
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Returns
                   </a>
                 </li>
@@ -252,17 +288,26 @@ export default function Index() {
               <h4 className="text-teal-400 font-bold mb-4">Connect</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Facebook
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/60 hover:text-teal-400 transition-colors font-light">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-teal-400 transition-colors font-light"
+                  >
                     Twitter
                   </a>
                 </li>
@@ -276,10 +321,16 @@ export default function Index() {
                 © 2025 Nua Premium Water. All rights reserved.
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#" className="text-white/60 hover:text-teal-400 transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-white/60 hover:text-teal-400 transition-colors text-sm"
+                >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-white/60 hover:text-teal-400 transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-white/60 hover:text-teal-400 transition-colors text-sm"
+                >
                   Terms of Service
                 </a>
               </div>
