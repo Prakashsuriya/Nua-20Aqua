@@ -31,16 +31,12 @@ export default function Index() {
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in font-light">
-            NEVAS brings you premium water sourced from pristine natural springs
+            Nua brings you premium water sourced from pristine natural springs
             and the pure Himalayan regions, enriched with essential minerals for
             the ultimate hydration experience.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <button className="px-8 py-4 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/30 flex items-center justify-center gap-2 group">
-              Shop Collection
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
             <button className="px-8 py-4 border-2 border-teal-500 text-teal-400 font-bold rounded-lg hover:bg-teal-500/10 transition-all duration-300">
               Learn More
             </button>
@@ -70,7 +66,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-teal-400 text-sm font-semibold tracking-widest uppercase mb-4">
-              Why Choose NEVAS
+              Why Choose Nua
             </h2>
             <h3 className="text-4xl md:text-5xl font-bold text-white">
               Excellence in Every Drop
