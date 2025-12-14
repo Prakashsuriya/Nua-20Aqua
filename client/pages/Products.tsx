@@ -30,7 +30,7 @@ export default function Products() {
       size: "330 ML",
       description: "Refined Mineral Richness",
       details:
-        "Nevas Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives. Enjoy the perfect refreshment with natural carbonation and essential minerals, delivering an elevated taste experience with every sip.",
+        "Nua Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives. Enjoy the perfect refreshment with natural carbonation and essential minerals, delivering an elevated taste experience with every sip.",
       image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
     },
     {
