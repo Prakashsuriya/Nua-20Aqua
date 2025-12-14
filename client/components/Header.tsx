@@ -6,7 +6,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="relative w-12 h-12">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F17404965b7254d8e8f0aee73b8a1600a?format=webp&width=800"
@@ -20,8 +20,8 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Center Navigation */}
+          <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
             <Link
               to="/"
               className="text-white/70 hover:text-teal-400 transition-colors font-light"
@@ -47,6 +47,11 @@ export function Header() {
               Contact
             </Link>
           </nav>
+
+          {/* NEVAS Button */}
+          <button className="hidden sm:block px-6 py-2 bg-teal-500 text-navy-800 font-semibold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/20 flex-shrink-0">
+            NEVAS
+          </button>
         </div>
       </div>
     </header>
