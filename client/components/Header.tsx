@@ -31,15 +31,15 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24 md:h-36">
             {/* Logo - Nua Aqua */}
-            <Link to="/" className="flex flex-col items-center gap-0 group flex-shrink-0 py-2">
-              <div className="relative w-16 h-16 md:w-24 md:h-24 text-white">
+            <Link to="/" className="flex flex-col items-center gap-0 group flex-shrink-0 -mt-2">
+              <div className="relative w-20 h-20 md:w-28 md:h-28 text-white">
                 <img
                   src="/Images/NQ LOGO.png"
                   alt="Nua Aqua Logo"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-[7px] md:text-[8px] text-white/50 font-medium tracking-[0.2em] uppercase whitespace-nowrap group-hover:text-white transition-colors">
+              <p className="text-[8px] md:text-[10px] text-white/50 font-medium tracking-[0.2em] uppercase whitespace-nowrap group-hover:text-white transition-colors -mt-3 md:-mt-4">
                 Where purity meets prestige
               </p>
             </Link>
@@ -64,10 +64,10 @@ export function Header() {
                   >
                     <Link
                       to="/products"
-                      className={`${location.pathname === '/products' ? 'text-white' : 'text-white/60'} hover:text-white transition-colors text-sm font-semibold tracking-wide whitespace-nowrap flex items-center gap-1.5 py-8`}
+                      className={`${location.pathname === '/products' ? 'text-white' : 'text-white/60'} hover:text-white transition-colors text-base font-bold tracking-wide whitespace-nowrap flex items-center gap-1.5 py-8`}
                     >
                       {link.label}
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} />
                     </Link>
                     <div className={`absolute top-full left-0 w-64 bg-blue-900 border border-blue-800 shadow-2xl rounded-xl overflow-hidden transition-all duration-300 ${isProductsOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'}`}>
                       <div className="py-2">
@@ -95,7 +95,7 @@ export function Header() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`${location.pathname === link.path ? 'text-white' : 'text-white/60'} hover:text-white transition-colors text-sm font-semibold tracking-wide whitespace-nowrap py-8`}
+                    className={`${location.pathname === link.path ? 'text-white' : 'text-white/60'} hover:text-white transition-colors text-base font-bold tracking-wide whitespace-nowrap py-8`}
                   >
                     {link.name}
                   </Link>
@@ -111,11 +111,11 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className="relative w-28 h-12 md:w-40 md:h-24">
+                <div className="relative w-28 h-12 md:w-44 md:h-28">
                   <img
                     src="/Images/Nevas log.png"
                     alt="Nua Aqua"
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </a>
