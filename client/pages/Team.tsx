@@ -18,7 +18,7 @@ export default function Team() {
       <Header />
 
       {/* Hero Section - About Us */}
-      <section className="relative w-full pt-44 pb-16">
+      <section className="relative w-full pt-44 pb-16 bg-blue-50/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={fadeIn}

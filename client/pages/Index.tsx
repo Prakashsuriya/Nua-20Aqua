@@ -143,7 +143,7 @@ export default function Index() {
       </section>
 
       {/* Trusted Packaged Drinking Water Section */}
-      <section className="py-24 bg-gray-50/50">
+      <section className="py-24 bg-blue-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-16 text-center font-primary">
             Trusted Packaged Drinking Water Delivered Worldwide
@@ -192,7 +192,7 @@ export default function Index() {
       </section>
 
       {/* Our Esteemed Clients Marquee Section */}
-      <section className="py-20 bg-white overflow-hidden border-b border-blue-50">
+      <section className="py-20 bg-blue-50/50 overflow-hidden border-y border-blue-100/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <h2 className="text-3xl font-bold text-blue-900 text-center font-primary uppercase tracking-widest">
             Our Esteemed Clients
@@ -340,7 +340,7 @@ export default function Index() {
 
       {/* Why Choose Nua Aqua Section */}
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-blue-50/30 border-t border-blue-100/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 font-primary">

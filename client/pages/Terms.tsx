@@ -6,7 +6,7 @@ export default function Terms() {
     return (
         <div className="bg-white min-h-screen">
             <Header />
-            <div className="pt-44 pb-20 px-4 sm:px-6 lg:px-8">
+            <div className="pt-44 pb-20 px-4 sm:px-6 lg:px-8 bg-blue-50/20">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

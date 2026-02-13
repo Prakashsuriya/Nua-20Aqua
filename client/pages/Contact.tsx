@@ -34,7 +34,7 @@ export default function Contact() {
     <div className="bg-white min-h-screen">
       <Header />
 
-      <section className="pt-44 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-44 pb-20 px-4 sm:px-6 lg:px-8 bg-blue-50/20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center lg:items-center gap-0 lg:gap-12 min-h-[600px]">
 

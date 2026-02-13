@@ -187,7 +187,7 @@ export default function Franchise() {
             </section>
 
             {/* Brand Info Section */}
-            <section className="py-24 bg-gray-50/30">
+            <section className="py-24 bg-blue-50/50 border-t border-blue-100/50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         {/* Left: Image */}
