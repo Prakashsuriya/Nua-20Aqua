@@ -10,31 +10,31 @@ const products: Product[] = [
     id: "1",
     name: "Mineral Water",
     description: "750 ML - Enriched with Essential Minerals",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=300",
+    image: "/Images/Nevas_Mineral-water-Bottle-750-ML-2-1024x1024.jpg",
   },
   {
     id: "2",
     name: "Vitamin B12",
     description: "750 ML - Energy & Wellness Water",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=300",
+    image: "/Images/Nevas_B12-Bottle-750-ML-without-Shadow-1024x1024.jpg",
   },
   {
     id: "3",
     name: "Sparkling Water",
     description: "330 ML - Refined Mineral Richness",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=300",
+    image: "/Images/unnamed-1-1024x1024 copy.png",
   },
   {
     id: "4",
     name: "Himalayan Water",
     description: "330 ML - Pure Himalayan Spring Water",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=300",
+    image: "/Images/unnamed-1-1024x1024.jpg",
   },
   {
     id: "5",
     name: "Still Water",
     description: "750 ML - Premium Glass Bottle",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=300",
+    image: "/Images/unnamed-1024x1024.jpg",
   },
 ];
 

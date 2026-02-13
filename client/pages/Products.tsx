@@ -1,209 +1,206 @@
 import { Header } from "@/components/Header";
-import { useState } from "react";
-import { X } from "lucide-react";
+import { Footer } from "@/components/Footer";
+import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle2, Droplet, Zap, Sparkles, Box, ShieldCheck, Leaf } from "lucide-react";
 
 export default function Products() {
-  const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
-
   const products = [
     {
-      id: 1,
+      id: "mineral-water",
+      homeLabel: "Mineral Water 750ml",
       name: "Mineral Water",
-      size: "750 ML",
-      description: "Enriched with Essential Minerals",
-      details:
-        "Our mineral water is enriched with essential minerals that support optimal health and wellness. Perfect for daily hydration. Each bottle contains naturally sourced minerals including calcium, magnesium, and potassium that support bone health and overall vitality.",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F854aff88eb3c4cd9a9af335d191d70ab?format=webp&width=400",
+      tagline: "Mineral Water 750ML – Trusted for Safe & Fresh Drinking Water",
+      description: "Uncompromising Purity: Our Mineral Water undergoes a rigorous 13-stage filtration process, ensuring pristine quality and optimal taste.",
+      features: [
+        { title: "Mineral Replenishment", detail: "Naturally occurring Potassium and Magnesium are retained, adding essential minerals often stripped away in standard purification." },
+        { title: "Enhanced Oxygenation", detail: "Ozone Booster technology infuses the water with extra oxygen, promoting freshness and vitality." },
+        { title: "Spring Technology Advantage", detail: "Experience the difference! Our unique spring technology delivers a naturally smooth and subtly sweet taste." }
+      ],
+      availability: "Available in: 200ml, 500ml, 1000ml, and 20-liter jars for versatile hydration on the go or at home.",
+      image: "/Images/Mineral Water.png",
+      theme: "blue"
     },
     {
-      id: 2,
-      name: "Vitamin B12",
-      size: "750 ML",
-      description: "Energy & Wellness Water",
-      details:
-        "Infused with Vitamin B12 to support energy and metabolism. An elevated hydration experience for those seeking enhanced wellness. Our B12-enriched formula helps combat fatigue and supports red blood cell formation, making it ideal for active individuals.",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F9546ce597c0246a39cf18eeb5092f4ea?format=webp&width=400",
+      id: "alkaline-water",
+      homeLabel: "Alkaline Water 750 ml",
+      name: "Alkaline Water",
+      tagline: "Stay Energized with Nua Aqua Alkaline Water 750ml – Premium Hydration",
+      description: "Authentic Alkalization: Platinum Plate with Electrolytes technology, the gold standard for natural alkalization, gently elevates the water's pH level.",
+      features: [
+        { title: "Unlock Uncountable Benefits", detail: "Enjoy the potential advantages of alkaline water, including improved digestion, enhanced mineral absorption, and antioxidant support." },
+        { title: "Superior Hydration", detail: "Refresh your body and mind with the perfect blend of taste and potential health benefits." }
+      ],
+      availability: "Available in: 1000ml and 20-liter jars, ideal for daily consumption or larger gatherings.",
+      image: "/Images/Alkaline Water.png",
+      theme: "teal"
     },
     {
-      id: 3,
-      name: "Sparkling Water",
-      size: "330 ML",
-      description: "Refined Mineral Richness",
-      details:
-        "Nua Sparkling Water offers a refined balance of fine natural mineral richness. No added salts, sugars, or preservatives. Enjoy the perfect refreshment with natural carbonation and essential minerals, delivering an elevated taste experience with every sip.",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F3b3ebc1a240d43c5a6580e94604e9c5e?format=webp&width=400",
+      id: "vitamin-b12",
+      homeLabel: "Vitamin B12 Water 750ML",
+      name: "Vitamin B12 Water",
+      tagline: "Nua Aqua 750ml Vitamin B12 Water – Boost Your Hydration & Vitality",
+      description: "Vitamin B12 Boost: Enriched with essential Vitamin B12, vital for energy production, brain function, and nervous system health.",
+      features: [
+        { title: "EMF Technology", detail: "This innovative technology ensures the water retains its natural ionic structure." },
+        { title: "Healthy Hair & Nails", detail: "Biotin, naturally present in Vitamin B12, contributes to the health and beauty of your hair and nails." },
+        { title: "Red Blood Cell Production", detail: "Vitamin B12 plays a crucial role in the formation of healthy red blood cells, essential for oxygen transport." }
+      ],
+      availability: "Available in: 1000ml and 20-litre jars, convenient for incorporating into your daily routine.",
+      image: "/Images/Vitamin B12.png",
+      theme: "indigo"
     },
     {
-      id: 4,
+      id: "himalayan-water",
+      homeLabel: "Himalayan Water 330ML",
       name: "Himalayan Water",
-      size: "330 ML",
-      description: "Pure Himalayan Spring Water",
-      details:
-        "Premium canned Himalayan water sourced directly from pristine springs. Flows through natural rock layers for pure, refreshing taste. Our proprietary sourcing ensures the highest purity standards, free from contaminants and enriched with nature's finest minerals.",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F2bb62d09343b4046aaa49bc4bded9bb9?format=webp&width=400",
+      tagline: "Naturally Pure, Naturally Yours – Rare Himalayan Spring Water",
+      description: "Nua Aqua Himalayan Water stands out for its commitment to purity, sustainability, and wellness. Extracted from pure Himalayan springs, celebrated for its rich mineral content and unmatched clarity.",
+      features: [
+        { title: "Pristine Origins", detail: "Sourced from high-altitude springs that flow naturally through rock layers for unmatched purity." },
+        { title: "Eco-Conscious Focus", detail: "Catered to those who seek more than just hydration—offering a taste of nature's finest with sustainable practices." }
+      ],
+      availability: "Favored by both everyday homes and high-end hospitality, redefining the concept of premium drinking water.",
+      image: "/Images/Himalayan Water.png",
+      theme: "sky"
     },
     {
-      id: 5,
-      name: "Still Water",
-      size: "750 ML",
-      description: "Premium Glass Bottle",
-      details:
-        "The true luxury of pure water in elegant glass packaging. A sophisticated choice for those who appreciate refined hydration. Our still water is sourced from premium springs and delivered in environmentally-friendly glass bottles that preserve purity.",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fabff378595fe4f11bccbd9aca6c5c3ea%2F78ff0755f2c34c85b6ddb8c664a72a51?format=webp&width=400",
+      id: "sparkling-water",
+      homeLabel: "Sparkling Water 330 ML",
+      name: "Sparkling Water",
+      tagline: "Naturally Healthy Drinks for Everyday Wellness",
+      description: "The gold standard for luxury sparkling water. Our crisp fizz and refreshing taste represent a sophisticated alternative to sugary beverages.",
+      features: [
+        { title: "Sophisticated Profile", detail: "Common choice at upscale restaurants and events; redefining luxury hydration across India." },
+        { title: "Surat's Premium Choice", detail: "Rapidly growing market for high-quality, locally available sparkling water that elevates dining and social occasions." }
+      ],
+      availability: "Perfect for hydration, mixing with drinks, or enjoying on its own.",
+      image: "/Images/Sparkling Water.jpg",
+      theme: "slate"
     },
+    {
+      id: "glass-bottle",
+      homeLabel: "Glass Water Bottle",
+      name: "Glass Bottle",
+      tagline: "Premium Glass Drinking Water Bottles For Packaging And Beverage Needs",
+      description: "Shop premium glass water bottles that offer a clean and pure drinking experience. Designed to keep your water fresh, just like still water, without any unwanted taste or chemicals.",
+      features: [
+        { title: "Eco-Friendly Design", detail: "Reusable, stylish, and durable glass that preserves the natural ionic structure of the water." },
+        { title: "Versatile Sizes", detail: "Available in 750ml and 300ml variants to suit both personal and hospitality needs." }
+      ],
+      availability: "Enjoy the benefits of safe, natural hydration with every sip from a durable, elegantly designed glass bottle.",
+      image: "/Images/Glass Water Bottle.jpeg",
+      theme: "zinc"
+    }
   ];
 
-  const selectedProductData = selectedProduct
-    ? products.find((p) => p.id === selectedProduct)
-    : null;
-
   return (
-    <div className="bg-navy-800 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full pt-32 pb-16 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Our Products
-            </h1>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto font-light">
-              Discover our premium water collection, each crafted with care for
-              the most discerning palates.
-            </p>
-          </div>
+      <section className="relative w-full pt-40 pb-20 bg-blue-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/Images/WAVES.png')] opacity-10 bg-repeat-x bg-bottom h-64"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-primary">Our Premium Collection</h1>
+          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+            Discover the Nua Aqua range, where cutting-edge technology meets
+            nature's purest resources for an elite hydration experience.
+          </p>
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-20 bg-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="group rounded-lg border border-teal-500/20 hover:border-teal-500/50 bg-gradient-to-br from-navy-700 to-navy-800 overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-500/20"
-              >
-                {/* Product Image */}
-                <div className="relative h-64 overflow-hidden bg-navy-900">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-800 to-transparent opacity-40"></div>
+      {/* Products Detail Sections */}
+      <div className="divide-y divide-blue-50">
+        {products.map((product, index) => (
+          <section key={product.id} id={product.id} className={`py-24 md:py-32 scroll-mt-20 ${index % 2 === 1 ? 'bg-blue-50/30' : 'bg-white'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mb-12">
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 mr-4 rounded">{product.homeLabel}</span>
+              </div>
+
+              <div className={`grid md:grid-cols-2 gap-16 lg:gap-24 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                {/* Image Side */}
+                <div className={`relative ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                  <div className="absolute inset-0 bg-blue-600/5 rounded-[3rem] -rotate-3 blur-2xl"></div>
+                  <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-blue-50">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700 mx-auto max-h-[500px]"
+                    />
+                  </div>
                 </div>
 
-                {/* Product Info */}
-                <div className="p-6">
-                  <div className="mb-3">
-                    <h3 className="text-xl font-bold text-teal-400 mb-1">
+                {/* Content Side */}
+                <div className={`space-y-8 ${index % 2 === 1 ? 'md:order-1 text-left' : 'text-left'}`}>
+                  <div>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4 font-primary">
                       {product.name}
-                    </h3>
-                    <span className="text-xs text-teal-500/70 font-semibold">
-                      {product.size}
-                    </span>
+                    </h2>
+                    <p className="text-lg md:text-xl font-bold text-blue-600 leading-snug">
+                      {product.tagline}
+                    </p>
                   </div>
 
-                  <p className="text-white/70 mb-6 text-sm">
+                  <p className="text-blue-900/70 text-lg leading-relaxed font-normal">
                     {product.description}
                   </p>
 
-                  <div className="flex justify-center">
-                    <button
-                      onClick={() => setSelectedProduct(product.id)}
-                      className="px-6 py-2 bg-teal-500/20 text-teal-400 border border-teal-500/50 rounded-lg hover:bg-teal-500 hover:text-navy-800 transition-all duration-300 text-sm font-semibold"
+                  <div className="space-y-6 pt-4">
+                    {product.features.map((feature, fIndex) => (
+                      <div key={fIndex} className="flex gap-4">
+                        <div className="flex-shrink-0 mt-1">
+                          <CheckCircle2 className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <h4 className="text-blue-900 font-bold text-lg mb-1">{feature.title}</h4>
+                          <p className="text-blue-900/60 leading-relaxed">{feature.detail}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-6 bg-blue-50 rounded-2xl border border-blue-100 mt-10">
+                    <p className="text-blue-900/80 font-medium italic">
+                      {product.availability}
+                    </p>
+                  </div>
+
+                  <div className="pt-8">
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-3 bg-blue-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all shadow-xl shadow-blue-900/20 group"
                     >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Full Screen Modal */}
-      {selectedProductData && (
-        <div className="fixed inset-0 bg-navy-900 z-50 overflow-y-auto flex flex-col">
-          {/* Modal Header with Close */}
-          <div className="sticky top-0 flex justify-between items-center p-6 border-b border-teal-500/20 bg-navy-800 z-10">
-            <h2 className="text-3xl font-bold text-white">
-              {selectedProductData.name}
-            </h2>
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="p-2 hover:bg-navy-700 rounded-lg transition-colors"
-            >
-              <X className="w-6 h-6 text-white" />
-            </button>
-          </div>
-
-          {/* Modal Content */}
-          <div className="flex-1 p-8 md:p-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                {/* Image */}
-                <div>
-                  <img
-                    src={selectedProductData.image}
-                    alt={selectedProductData.name}
-                    className="w-full h-auto object-cover rounded-lg border border-teal-500/20"
-                  />
-                </div>
-
-                {/* Product Info */}
-                <div className="space-y-8">
-                  <div>
-                    <p className="text-teal-400 text-sm font-semibold mb-2 uppercase tracking-widest">
-                      SIZE
-                    </p>
-                    <p className="text-white text-2xl font-bold">
-                      {selectedProductData.size}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-teal-400 text-sm font-semibold mb-2 uppercase tracking-widest">
-                      DESCRIPTION
-                    </p>
-                    <p className="text-white/80 text-xl leading-relaxed">
-                      {selectedProductData.description}
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className="text-teal-400 text-sm font-semibold mb-4 uppercase tracking-widest">
-                      ABOUT THIS PRODUCT
-                    </p>
-                    <p className="text-white/70 text-lg leading-relaxed">
-                      {selectedProductData.details}
-                    </p>
+                      Contact Us
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </section>
+        ))}
+      </div>
 
-      {/* Footer */}
-      <footer className="bg-navy-950 border-t border-teal-500/20 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-teal-500/20 pt-8">
-            <p className="text-white/60 text-center font-light">
-              © 2025 Nua Premium Water. All rights reserved.
-            </p>
-          </div>
+      {/* Trust & CTA Section */}
+      <section className="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 font-primary">The Luxury of Pure Water</h2>
+          <p className="text-xl text-white/70 mb-12 font-light leading-relaxed">
+            Whether for your home, your business, or elite hospitality needs,
+            Nua Aqua delivers unmatched purity and taste. Experience hydration
+            as it was meant to be.
+          </p>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 text-white border-b-2 border-white/30 pb-2 hover:border-white transition-all font-bold text-xl"
+          >
+            Learn about our journey <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
-      </footer>
+      </section>
+
+      <Footer />
     </div>
   );
 }

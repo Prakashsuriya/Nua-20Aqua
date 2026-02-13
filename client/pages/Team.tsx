@@ -1,148 +1,103 @@
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { motion, Variants } from "framer-motion";
 
 export default function Team() {
-  const team = [
-    {
-      id: 1,
-      name: "Keshav Budhia",
-      role: "Founder & Chief Executive Officer",
-      description:
-        "A visionary entrepreneur with a passion for wellness and innovation. Keshav Budhia founded Nevas Water with a singular goal to transform how people experience hydration. His leadership drives the brand's premium positioning and bold expansion into luxury and wellness markets.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-    },
-    {
-      id: 2,
-      name: "Avinash Jagnani",
-      role: "Chief Marketing Officer",
-      description:
-        "The creative engine behind Nevas' branding and market strategy. With a deep understanding of consumer psychology and modern aesthetics, Avinash crafts compelling narratives and campaigns that position Nevas as the water of choice for discerning and health-focused consumers.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop",
-    },
-    {
-      id: 3,
-      name: "Ritesh Budhia",
-      role: "Director",
-      description:
-        "Bringing strategic rigor and operational excellence to Nevas. Ritesh ensures that every drop of Nevas Water reaches its destination with unmatched quality and efficiency. His focus on scalability, distribution, and strategic partnerships shapes the future of premium hydration in Surat.",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop",
-    },
-  ];
+  const fadeIn: Variants = {
+    initial: { opacity: 0, y: 15 },
+    whileInView: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const imageFadeIn: Variants = {
+    initial: { opacity: 0, scale: 0.98 },
+    whileInView: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
+  };
 
   return (
-    <div className="bg-navy-800 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative w-full pt-32 pb-16 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Meet Our Founders
+      {/* Hero Section - About Us */}
+      <section className="relative w-full pt-44 pb-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="text-left mb-10"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 font-primary tracking-tight">
+              About Us
             </h1>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto font-light">
-              Visionaries committed to raising the standard of hydration through
-              elegance, wellness, and environmental responsibility.
-            </p>
+          </motion.div>
+
+          {/* Left-aligned Story Content */}
+          <div className="space-y-6 text-[17px] md:text-lg text-blue-900/80 leading-relaxed font-light text-left max-w-5xl">
+            <motion.p
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              Nua Aqua is more than just water; it’s an experience. Born from the vision of Budhia Beverages, a family-owned company built on passion and dedication, Nua Aqua embodies the essence of premium bottled water. In 2022, young entrepreneur Keshav Budhia embarked on a quest to create a global brand that redefined the bottled water experience. Driven by a love for beverages and a commitment to quality, he founded Budhia Beverages and introduced Nua Aqua to the market.
+            </motion.p>
+
+            <motion.p
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              Nua Aqua water is made with great care, using high-quality sources known for their excellent minerals. Beyond its intrinsic quality, Nua Aqua prioritizes purity from source to bottle. Our production process ensures no human contact with the water, guaranteeing its untouched nature. Additionally, our fully BIS-compliant plant operates under the watchful eye of dedicated professionals who continuously monitor quality at every stage. This unwavering commitment sets Nua Aqua apart.
+            </motion.p>
+
+            <motion.p
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              Presented in elegantly designed bottles and cans, available in three convenient sizes: 250ml, 330ml, and 750ml, Nua Aqua elevates any occasion. Whether you are seeking a personal indulgence or an elevated addition to your table, Nua Aqua Premium water complements your desire for both quality and style.
+            </motion.p>
+
+            <motion.p
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              Nua Aqua is the first and only Indian company to offer this unique and luxurious water experience. But our journey doesn’t end here. At Budhia Beverages, we are committed to innovation and plan to expand our offerings with more delicious and exciting beverages in the future. Ready to experience the Nua Aqua difference? Explore our bottle sizes to find the perfect fit for your lifestyle. Visit our website or find us at your nearest luxury retailer to elevate your hydration today.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
-            {team.map((member, index) => (
-              <div
-                key={member.id}
-                className={`grid md:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "md:direction-rtl" : ""
-                }`}
-              >
-                {/* Image */}
-                <div
-                  className={`relative rounded-lg overflow-hidden border-2 border-teal-500/30 bg-gradient-to-br from-navy-700 to-navy-800 group aspect-square ${
-                    index % 2 === 1 ? "md:order-last" : ""
-                  }`}
-                >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent opacity-60"></div>
-                </div>
-
-                {/* Content */}
-                <div className={index % 2 === 1 ? "md:order-first" : ""}>
-                  <h3 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-teal-400 text-lg font-semibold mb-6">
-                    {member.role}
-                  </p>
-                  <p className="text-white/80 text-lg leading-relaxed mb-8 font-light">
-                    {member.description}
-                  </p>
-                  <div className="flex gap-4">
-                    <button className="px-6 py-3 bg-teal-500 text-navy-800 font-bold rounded-lg hover:bg-teal-400 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30">
-                      View Profile
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Featured Animated Image - Nevas.jpg */}
+      <section className="pb-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={imageFadeIn}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-gray-50 border-4 border-white"
+          >
+            <img
+              src="/Images/nevas.jpg"
+              alt="Nua Aqua Premium Hydration"
+              className="w-full h-auto brightness-[0.98] hover:brightness-100 transition-all duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-gradient-to-b from-navy-800 to-navy-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What We Stand For
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Vision</h3>
-              <p className="text-white/70 leading-relaxed">
-                To be a global leader in premium water, recognized for excellence
-                in product quality, innovation, and sustainable practices.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Mission</h3>
-              <p className="text-white/70 leading-relaxed">
-                To deliver premium water that elevates hydration experiences while
-                maintaining the highest standards of purity and environmental
-                responsibility.
-              </p>
-            </div>
-
-            <div className="p-8 rounded-lg border border-teal-500/20 bg-navy-700/30 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-teal-400 mb-4">Values</h3>
-              <p className="text-white/70 leading-relaxed">
-                Premium Quality, Health-Focused Innovation, Environmental
-                Consciousness, and Integrity in every interaction.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-navy-950 border-t border-teal-500/20 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-teal-500/20 pt-8">
-            <p className="text-white/60 text-center font-light">
-              © 2024 NEVAS Premium Water. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

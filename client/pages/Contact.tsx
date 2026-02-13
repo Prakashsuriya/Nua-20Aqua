@@ -1,168 +1,179 @@
 import { Header } from "@/components/Header";
-import { Mail, Phone, MapPin, Globe, Instagram } from "lucide-react";
+import { Footer } from "@/components/Footer";
+import { motion, Variants } from "framer-motion";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+
+type ContactFormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
 
 export default function Contact() {
+  const { register, handleSubmit, reset } = useForm<ContactFormData>();
+
+  const onSubmit = (data: ContactFormData) => {
+    console.log("Contact Form Submitted:", data);
+    toast.success("Message sent successfully!", {
+      description: "Our team at sales@nuaaqua.com will get back to you soon.",
+    });
+    reset();
+  };
+
+  const fadeIn: Variants = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const infoIconClasses = "w-12 h-12 rounded-full border border-blue-900/10 flex items-center justify-center bg-blue-900 text-white flex-shrink-0";
+
   return (
-    <div className="bg-navy-800 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative w-full pt-32 pb-16 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Contact Us
-            </h1>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto font-light">
-              Whether you're a hospitality partner, distributor, health
-              conscious consumer, or event planner, we'd love to connect with
-              you.
-            </p>
+      <section className="pt-44 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center lg:items-center gap-0 lg:gap-12 min-h-[600px]">
+
+            {/* Left Col: Brand Info */}
+            <motion.div
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              className="lg:w-1/3 space-y-12 text-center lg:text-right flex flex-col items-center lg:items-end order-2 lg:order-1 mt-12 lg:mt-0"
+            >
+              <div className="space-y-2">
+                <h1 className="text-4xl md:text-5xl font-bold text-blue-900 font-primary leading-tight">
+                  Nua Aqua <br /> Premium Water
+                </h1>
+              </div>
+
+              <div className="space-y-6 max-w-sm">
+                {/* Address */}
+                <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
+                  <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
+                    <p className="font-semibold text-blue-900 mb-1">Budhia beverages Plot no D-17,18,19,20</p>
+                    <p>Govindji industrial park 2 Near sabar hotel</p>
+                    <p>Makhinga, palsana Surat - 394315</p>
+                  </div>
+                  <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
+                  <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
+                    <a href="tel:+918160072337" className="text-lg font-bold text-blue-900 hover:text-blue-600 transition-colors">+91 8160072337</a>
+                  </div>
+                  <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
+                    <Phone className="w-5 h-5" />
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
+                  <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
+                    <a href="mailto:sales@nuaaqua.com" className="text-blue-900 hover:text-blue-600 transition-colors font-semibold">sales@nuaaqua.com</a>
+                  </div>
+                  <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
+                    <Mail className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Center Col: Map */}
+            <motion.div
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="lg:w-1/3 relative z-10 order-1 lg:order-2"
+            >
+              <div className="relative p-2 lg:p-4 bg-[#F2B52B] rounded-2xl shadow-2xl transform lg:-translate-y-8">
+                <div className="h-[400px] md:h-[500px] w-full bg-white rounded-xl overflow-hidden shadow-inner">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431249.4762033616!2d72.3739630890625!3d21.071980800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04faa3a38cc29%3A0xfee95d725fa30883!2sNevas%20Water!5e1!3m2!1sen!2sus!4v1770917625399!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Col: Form */}
+            <motion.div
+              variants={fadeIn}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="lg:w-1/3 bg-blue-900 text-white p-8 md:p-12 self-stretch flex flex-col justify-center order-3"
+            >
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#F2B52B]">Name</label>
+                  <input
+                    {...register("name", { required: true })}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-[#F2B52B] transition-colors"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#F2B52B]">Email</label>
+                  <input
+                    {...register("email", { required: true })}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-[#F2B52B] transition-colors"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#F2B52B]">Phone number</label>
+                  <input
+                    {...register("phone", { required: true })}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-[#F2B52B] transition-colors"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#F2B52B]">Message</label>
+                  <textarea
+                    {...register("message", { required: true })}
+                    rows={4}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:outline-none focus:border-[#F2B52B] transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="pt-4 space-y-6">
+                  {/* CAPTCHA Placeholder */}
+                  <div className="bg-white p-4 flex items-center gap-4 rounded overflow-hidden">
+                    <input type="checkbox" className="w-5 h-5" readOnly />
+                    <span className="text-gray-700 text-sm">I'm not a robot</span>
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" className="ml-auto w-6 h-6 grayscale opacity-80" alt="reCAPTCHA" />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-white text-[#004246] font-bold py-4 rounded hover:bg-[#F2B52B] transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    Send —&gt;
+                  </button>
+                </div>
+              </form>
+            </motion.div>
+
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="py-20 bg-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-white/70 text-lg leading-relaxed mb-12">
-                For partnerships, inquiries, or general information about NEVAS
-                Premium Water, please reach out using any of the contact methods
-                below.
-              </p>
-            </div>
-
-            {/* Contact Details Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Address */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    Corporate Office
-                  </h3>
-                  <p className="text-white/70 font-light">
-                    NEVAS Premium Water
-                  </p>
-                  <p className="text-white/70 font-light">
-                    Palsana, Surat, Gujarat – 394315
-                  </p>
-                  <p className="text-white/70 font-light">India</p>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
-                  <a
-                    href="tel:+919033003147"
-                    className="text-teal-400 hover:text-teal-300 transition-colors font-light"
-                  >
-                    +91 90330 03147
-                  </a>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-                  <a
-                    href="mailto:info@nevas.in"
-                    className="text-teal-400 hover:text-teal-300 transition-colors font-light"
-                  >
-                    info@nevas.in
-                  </a>
-                </div>
-              </div>
-
-              {/* Website */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Globe className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">Website</h3>
-                  <a
-                    href="https://www.nevas.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-teal-400 hover:text-teal-300 transition-colors font-light"
-                  >
-                    www.nevas.in
-                  </a>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Instagram className="w-5 h-5 text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    Instagram
-                  </h3>
-                  <a
-                    href="https://instagram.com/nevas.water"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-teal-400 hover:text-teal-300 transition-colors font-light"
-                  >
-                    @nevas.water
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            Find Us on the Map
-          </h2>
-          <div className="rounded-lg overflow-hidden border-2 border-teal-500/30 h-96">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.0267267267267!2d72.78!3d21.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d97ab5ab5ab5%3A0x5ab5ab5ab5ab5ab5!2sPalsana%2C%20Surat%2C%20Gujarat%20394315!5e0!3m2!1sen!2sin!4v1234567890123"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="NEVAS Corporate Office Location"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-navy-950 border-t border-teal-500/20 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-teal-500/20 pt-8">
-            <p className="text-white/60 text-center font-light">
-              © 2025 Nua Premium Water. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
