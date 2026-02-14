@@ -108,7 +108,7 @@ export function Footer() {
 
                 <div className="border-t border-blue-200 pt-8 text-center">
                     <p className="text-blue-900/60 text-sm font-bold tracking-wide mb-1">
-                        Copyright © 2026 BUDHIA BEVERAGES – All Rights Reserved
+                        Copyright © 2026 Nua Aqua – All Rights Reserved
                     </p>
                     <div className="flex justify-center gap-4 text-blue-600 text-base font-bold">
                         <Link to="/privacy" className="hover:text-blue-800 transition-colors">Privacy Policy</Link>
