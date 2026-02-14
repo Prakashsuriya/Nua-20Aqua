@@ -18,7 +18,7 @@ export default function Contact() {
   const onSubmit = (data: ContactFormData) => {
     console.log("Contact Form Submitted:", data);
     toast.success("Message sent successfully!", {
-      description: "Our team at sales@nuaaqua.com will get back to you soon.",
+      description: "Our team at marketing@nuaaqua.com will get back to you soon.",
     });
     reset();
   };
@@ -56,9 +56,9 @@ export default function Contact() {
                 {/* Address */}
                 <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
                   <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
-                    <p className="font-semibold text-blue-900 mb-1">Budhia beverages Plot no D-17,18,19,20</p>
-                    <p>Govindji industrial park 2 Near sabar hotel</p>
-                    <p>Makhinga, palsana Surat - 394315</p>
+                    <p className="font-semibold text-blue-900 mb-1">N.M.R. Indl Park, Sy. No. 370</p>
+                    <p>Behind A2B Restaurant, Attibele</p>
+                    <p>Anekal Taluk, Bangalore - 562 107.</p>
                   </div>
                   <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
                     <MapPin className="w-5 h-5" />
@@ -68,7 +68,7 @@ export default function Contact() {
                 {/* Phone */}
                 <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
                   <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
-                    <a href="tel:+918160072337" className="text-lg font-bold text-blue-900 hover:text-blue-600 transition-colors">+91 8160072337</a>
+                    <a href="tel:+919880725880" className="text-lg font-bold text-blue-900 hover:text-blue-600 transition-colors">+91 9880725880</a>
                   </div>
                   <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
                     <Phone className="w-5 h-5" />
@@ -78,7 +78,7 @@ export default function Contact() {
                 {/* Email */}
                 <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-end gap-4 group">
                   <div className="text-blue-900/60 font-light text-sm lg:text-right order-2 lg:order-1">
-                    <a href="mailto:sales@nuaaqua.com" className="text-blue-900 hover:text-blue-600 transition-colors font-semibold">sales@nuaaqua.com</a>
+                    <a href="mailto:marketing@nuaaqua.com" className="text-blue-900 hover:text-blue-600 transition-colors font-semibold">marketing@nuaaqua.com</a>
                   </div>
                   <div className={infoIconClasses + " order-1 lg:order-2 group-hover:bg-[#F2B52B] transition-colors"}>
                     <Mail className="w-5 h-5" />
@@ -99,7 +99,7 @@ export default function Contact() {
               <div className="relative p-2 lg:p-4 bg-[#F2B52B] rounded-2xl shadow-2xl transform lg:-translate-y-8">
                 <div className="h-[400px] md:h-[500px] w-full bg-white rounded-xl overflow-hidden shadow-inner">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431249.4762033616!2d72.3739630890625!3d21.071980800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04faa3a38cc29%3A0xfee95d725fa30883!2sNevas%20Water!5e1!3m2!1sen!2sus!4v1770917625399!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3521.0994496164417!2d77.76306407507323!3d12.782305987515953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ2JzU2LjMiTiA3N8KwNDUnNTYuMyJF!5e1!3m2!1sen!2sin!4v1771046821915!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

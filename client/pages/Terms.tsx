@@ -58,7 +58,7 @@ export default function Terms() {
                             </div>
 
                             <p>
-                                If you have any questions about these Terms and Conditions, please contact us at +91 8160072337.
+                                If you have any questions about these Terms and Conditions, please contact us at +91 9880725880.
                             </p>
                         </div>
                     </motion.div>

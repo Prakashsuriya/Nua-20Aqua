@@ -70,13 +70,13 @@ export function Footer() {
                         <h4 className="text-blue-900 text-base font-bold mb-10 tracking-wide whitespace-nowrap">Connect With Us</h4>
                         <div className="space-y-6">
                             <div className="space-y-4">
-                                <a href="tel:+918160072337" className="flex items-center gap-3 text-blue-900/70 hover:text-blue-600 transition-colors">
+                                <a href="tel:+919880725880" className="flex items-center gap-3 text-blue-900/70 hover:text-blue-600 transition-colors">
                                     <Phone className="w-4 h-4" />
-                                    <span className="font-bold">+91 8160072337</span>
+                                    <span className="font-bold">+91 9880725880</span>
                                 </a>
-                                <a href="mailto:sales@nuaaqua.com" className="flex items-center gap-3 text-blue-900/70 hover:text-blue-600 transition-colors">
+                                <a href="mailto:marketing@nuaaqua.com" className="flex items-center gap-3 text-blue-900/70 hover:text-blue-600 transition-colors">
                                     <Mail className="w-4 h-4" />
-                                    <span>sales@nuaaqua.com</span>
+                                    <span>marketing@nuaaqua.com</span>
                                 </a>
                             </div>
 
@@ -90,7 +90,7 @@ export function Footer() {
 
                             <div className="mt-8 rounded-lg overflow-hidden h-[130px] w-full border border-blue-200 group relative shadow-inner bg-white">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431249.4762033616!2d72.3739630890625!3d21.071980800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04faa3a38cc29%3A0xfee95d725fa30883!2sNevas%20Water!5e1!3m2!1sen!2sus!4v1770917625399!5m2!1sen!2sus"
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3521.0994496164417!2d77.76306407507323!3d12.782305987515953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ2JzU2LjMiTiA3N8KwNDUnNTYuMyJF!5e1!3m2!1sen!2sin!4v1771046821915!5m2!1sen!2sin"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}

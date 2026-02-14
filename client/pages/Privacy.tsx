@@ -57,7 +57,7 @@ export default function Privacy() {
                             </div>
 
                             <p>
-                                We may occasionally update this Privacy Policy. We’ll notify you of any changes by posting the updated policy on our website. If you have any questions, please contact us at +91 8160072337.
+                                We may occasionally update this Privacy Policy. We’ll notify you of any changes by posting the updated policy on our website. If you have any questions, please contact us at +91 9880725880.
                             </p>
                         </div>
                     </motion.div>

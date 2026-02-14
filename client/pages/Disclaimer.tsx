@@ -33,7 +33,7 @@ export default function Disclaimer() {
                             </p>
 
                             <p>
-                                We reserve the right to modify this disclaimer at any time without prior notice. Your continued use of this website constitutes your acceptance of any such changes. If you have any questions about this disclaimer, please contact us at +91 8160072337.
+                                We reserve the right to modify this disclaimer at any time without prior notice. Your continued use of this website constitutes your acceptance of any such changes. If you have any questions about this disclaimer, please contact us at +91 9880725880.
                             </p>
                         </div>
                     </motion.div>

@@ -23,7 +23,7 @@ export default function Distribution() {
   const onSubmit = (data: DistributorshipFormData) => {
     console.log("Distribution Form Submitted:", data);
     toast.success("Application submitted successfully!", {
-      description: "Our sales team (sales@nuaaqua.com) will contact you shortly.",
+      description: "Our marketing team (marketing@nuaaqua.com) will contact you shortly.",
     });
     reset();
   };
@@ -254,50 +254,6 @@ export default function Distribution() {
         </div>
       </section>
 
-      {/* Existing Distributors Section (Optional/Kept for continuity) */}
-      <section className="py-24 bg-blue-50/50 border-t border-blue-100/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4 font-primary">
-              Our Distribution Partners
-            </h2>
-            <p className="text-blue-900/60 text-lg font-light">
-              Connecting premium water to premium destinations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {distributors.map((distributor) => (
-              <div
-                key={distributor.id}
-                className="rounded-2xl border border-blue-100 bg-white p-8 transition-all duration-300 hover:shadow-xl hover:border-blue-600/20 group"
-              >
-                <h3 className="text-2xl font-bold text-blue-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {distributor.name}
-                </h3>
-                <p className="text-blue-600 text-sm mb-6 font-semibold uppercase tracking-widest text-[#F2B52B]">
-                  {distributor.region}
-                </p>
-
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                    <p className="text-blue-900/70 text-sm">{distributor.address}</p>
-                  </div>
-                  <div className="flex gap-4">
-                    <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                    <a href={`tel:${distributor.contact}`} className="text-blue-600 text-sm hover:underline">{distributor.contact}</a>
-                  </div>
-                  <div className="flex gap-4">
-                    <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                    <a href={`mailto:${distributor.email}`} className="text-blue-600 text-sm hover:underline">{distributor.email}</a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

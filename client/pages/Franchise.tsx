@@ -24,7 +24,7 @@ export default function Franchise() {
     const onSubmit = (data: FranchiseFormData) => {
         console.log("Form Data Submitted:", data);
         toast.success("Application submitted successfully! Our team will contact you soon.", {
-            description: "Data sent to sales@nuaaqua.com (simulated)",
+            description: "Data sent to marketing@nuaaqua.com (simulated)",
         });
         reset();
     };
