@@ -18,6 +18,7 @@ import Disclaimer from "@/pages/Disclaimer";
 import IceCube from "@/pages/IceCube";
 import NotFound from "@/pages/NotFound";
 import { ScrollToAnchor } from "./components/ScrollToAnchor";
+import { WhatsAppWidget } from "./components/WhatsAppWidget";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToAnchor />
+        <WhatsAppWidget />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<Team />} />

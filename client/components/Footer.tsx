@@ -29,7 +29,6 @@ export function Footer() {
                                 { name: 'Our Products', path: '/products' },
                                 { name: 'Franchise', path: '/franchise' },
                                 { name: 'Distribution', path: '/distribution' },
-                                { name: 'Feedback', path: '/contact' },
                                 { name: 'Contact Us', path: '/contact' }
                             ].map((item) => (
                                 <li key={item.name} className="flex items-center">
