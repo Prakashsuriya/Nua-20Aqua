@@ -51,7 +51,7 @@ export function Footer() {
                                     { name: 'Vitamin B12 Water', id: 'vitamin-b12' },
                                     { name: 'Himalayan Water', id: 'himalayan-water' },
                                     { name: 'Sparkling Water', id: 'sparkling-water' },
-                                    { name: 'Glass Water Bottle', id: 'glass-bottle' },
+                                    { name: 'Frosted Glass Bottle', id: 'glass-bottle' },
                                     { name: 'Ice Cubes', path: '/ice-cube' }
                                 ].map((item) => (
                                     <li key={item.name} className="flex items-center">

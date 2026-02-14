@@ -77,7 +77,7 @@ export function Header() {
                           { name: 'Vitamin B12 Water', id: 'vitamin-b12' },
                           { name: 'Himalayan Water', id: 'himalayan-water' },
                           { name: 'Sparkling Water', id: 'sparkling-water' },
-                          { name: 'Glass Water Bottle', id: 'glass-bottle' }
+                          { name: 'Frosted Glass Bottle', id: 'glass-bottle' }
                         ].map((product) => (
                           <Link
                             key={product.id}
@@ -174,7 +174,7 @@ export function Header() {
                       { name: 'Vitamin B12 Water', id: 'vitamin-b12' },
                       { name: 'Himalayan Water', id: 'himalayan-water' },
                       { name: 'Sparkling Water', id: 'sparkling-water' },
-                      { name: 'Glass Water Bottle', id: 'glass-bottle' }
+                      { name: 'Frosted Glass Bottle', id: 'glass-bottle' }
                     ].map((product) => (
                       <Link
                         key={product.id}

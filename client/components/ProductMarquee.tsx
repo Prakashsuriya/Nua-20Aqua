@@ -33,7 +33,7 @@ const products: Product[] = [
   {
     id: "5",
     name: "Still Water",
-    description: "750 ML - Premium Glass Bottle",
+    description: "750 ML - Premium Frosted Glass Bottle",
     image: "/Images/unnamed-1024x1024.jpg",
   },
 ];

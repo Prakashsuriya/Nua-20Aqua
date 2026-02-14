@@ -79,10 +79,10 @@ export default function Products() {
     },
     {
       id: "glass-bottle",
-      homeLabel: "Glass Water Bottle",
-      name: "Glass Bottle",
-      tagline: "Premium Glass Drinking Water Bottles For Packaging And Beverage Needs",
-      description: "Shop premium glass water bottles that offer a clean and pure drinking experience. Designed to keep your water fresh, just like still water, without any unwanted taste or chemicals.",
+      homeLabel: "Frosted Glass Bottle",
+      name: "Frosted Glass Bottle",
+      tagline: "Premium Frosted Glass Drinking Water Bottles For Packaging And Beverage Needs",
+      description: "Shop premium frosted glass water bottles that offer a clean and pure drinking experience. Designed to keep your water fresh, just like still water, without any unwanted taste or chemicals.",
       features: [
         { title: "Eco-Friendly Design", detail: "Reusable, stylish, and durable glass that preserves the natural ionic structure of the water." },
         { title: "Versatile Sizes", detail: "Available in 750ml and 300ml variants to suit both personal and hospitality needs." }
